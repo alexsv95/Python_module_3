@@ -42,6 +42,7 @@ def string_info(word):
 
 # Вариант реализации функции с учетом предложений от Тюрина Романа
 def is_contains(word, list_words):
+    count_calls()
     for i in list_words: # Цикл перебора всех значений из списка list_word
         if word.lower() == i.lower(): # Преобразование строк из параметров word и list_words(i) в нижний регистр и их сравнение
             return True
