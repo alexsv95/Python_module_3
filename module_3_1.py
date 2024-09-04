@@ -18,6 +18,7 @@ def count_calls():
 #     count_calls() # Вызов функции count_calls
 #     return tuple_
 
+
 # Вариант реализации функции с учетом предложений от Тюрина Романа
 def string_info(word):
     len_word = len(word) # Запись длины строки в отдельную переменную
