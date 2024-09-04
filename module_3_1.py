@@ -20,14 +20,19 @@ def count_calls():
 
 
 # Вариант реализации функции с учетом предложений от Тюрина Романа
-def string_info(word):
-    len_word = len(word) # Запись длины строки в отдельную переменную
-    upper_word = word.upper() # Запись строки в верхнем регистре в отдельную переменную
-    lower_word = word.lower() # Запись строки в нижнем регистре в отдельную переменную
-    tuple_ = (len_word, upper_word, lower_word) # Добавление всех локальных переменных внутри функции в картеж tuple_
-    count_calls() # Вызов функции count_calls
-    return tuple_
+# def string_info(word):
+#     len_word = len(word) # Запись длины строки в отдельную переменную
+#     upper_word = word.upper() # Запись строки в верхнем регистре в отдельную переменную
+#     lower_word = word.lower() # Запись строки в нижнем регистре в отдельную переменную
+#     tuple_ = (len_word, upper_word, lower_word) # Добавление всех локальных переменных внутри функции в картеж tuple_
+#     count_calls() # Вызов функции count_calls
+#     return tuple_
 
+# Более оптимальный вариант реализации функции string_info (без использования локальных переменных)
+def string_info(word):
+    tuple_ = (len(word), word.upper(), word.lower())
+    count_calls()  # Вызов функции count_calls
+    return tuple_
 
 # def is_contains(word, list_words):
 #     match_found = False # Создание переменной в флагом
