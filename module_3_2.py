@@ -12,6 +12,8 @@ def domain_check_valid(email):
 
 
 def send_email(message, recipient, *, sender = 'university.help@gmail.com'):
+    if '@' not in recipient or '@' not in sender:
+        return print(f'Невозможно отправить письмо с адреса {sender} на адрес {recipient} без @')
     if domain_check_valid(recipient) == False or domain_check_valid(sender) == False:
         return print(f'Невозможно отправить письмо с адреса {sender} на адрес {recipient}')
     # if recipient.find('@') != -1 and sender.find('@') != -1:
@@ -20,10 +22,6 @@ def send_email(message, recipient, *, sender = 'university.help@gmail.com'):
     #             return print(f'Невозможно отправить письмо с адреса {sender} на адрес {recipient}')
     #         else:
     #             break
-    # if '@' not in recipient or not recipient.endswith('.ru') and not recipient.endswith('.net') and not recipient.endswith('.com'):
-    #     return print(f'Невозможно отправить письмо с адреса {sender} на адрес {recipient} без @')
-    # if '@' not in sender or not sender.endswith('.ru') and not sender.endswith('.net') and not sender.endswith('.com'):
-    #     return print(f'Невозможно отправить письмо с адреса {sender} на адрес {recipient} без @')
     # else:
     #     for i in domain_control:
     #         if not recipient.endswith(i):
