@@ -5,9 +5,7 @@ domain_control = ['.ru', '.net', '.com']
 def domain_check_valid(email):
     for i in domain_control:
         if email[-len(i):] == i:
-            domain_true = True
-            if domain_true:
-                return True
+            return True
     return False
 
 
