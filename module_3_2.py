@@ -1,17 +1,29 @@
 # Задача "Рассылка писем"
+domain_control = ['.ru', '.net', '.com']
+
+
+def domain_check_valid(email):
+    for i in domain_control:
+        if email[-len(i):] == i:
+            domain_true = True
+            if domain_true:
+                return True
+    return False
+
 
 def send_email(message, recipient, *, sender = 'university.help@gmail.com'):
-    # domain_control = ['.ru', '.net', '.com']
+    if domain_check_valid(recipient) == False or domain_check_valid(sender) == False:
+        return print(f'Невозможно отправить письмо с адреса {sender} на адрес {recipient}')
     # if recipient.find('@') != -1 and sender.find('@') != -1:
     #     for i in domain_control:
     #         if recipient.find(i) != -1 and sender.find(i) != -1:
     #             return print(f'Невозможно отправить письмо с адреса {sender} на адрес {recipient}')
     #         else:
     #             break
-    if '@' not in recipient or not recipient.endswith('.ru') and not recipient.endswith('.net') and not recipient.endswith('.com'):
-        return print(f'Невозможно отправить письмо с адреса {sender} на адрес {recipient} без @')
-    if '@' not in sender or not sender.endswith('.ru') and not sender.endswith('.net') and not sender.endswith('.com'):
-        return print(f'Невозможно отправить письмо с адреса {sender} на адрес {recipient} без @')
+    # if '@' not in recipient or not recipient.endswith('.ru') and not recipient.endswith('.net') and not recipient.endswith('.com'):
+    #     return print(f'Невозможно отправить письмо с адреса {sender} на адрес {recipient} без @')
+    # if '@' not in sender or not sender.endswith('.ru') and not sender.endswith('.net') and not sender.endswith('.com'):
+    #     return print(f'Невозможно отправить письмо с адреса {sender} на адрес {recipient} без @')
     # else:
     #     for i in domain_control:
     #         if not recipient.endswith(i):
