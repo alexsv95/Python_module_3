@@ -1,7 +1,7 @@
 # Задача "Рассылка писем"
 
 def send_email(message, recipient, *, sender = 'university.help@gmail.com'):
-    domain_control = ['.ru', '.net', '.com']
+    # domain_control = ['.ru', '.net', '.com']
     # if recipient.find('@') != -1 and sender.find('@') != -1:
     #     for i in domain_control:
     #         if recipient.find(i) != -1 and sender.find(i) != -1:
