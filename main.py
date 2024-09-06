@@ -1,5 +1,16 @@
-def string_info(word):
-    tuple_ = (len(word), word.upper(), word.lower())
-    return tuple_
+# domain = ['.ru', '.net', '.com']
+# txt = "email@gm.ru"
+#
+# for i in domain:
+#     if txt[-len(i):] == i:
+#         print(True)
+#     else:
+#         print(False)
+#
+#
+# print(txt[-3:])
 
-print(string_info('WORK'))
+def info (**kwargs: dict):
+    print(kwargs)
+
+info()
